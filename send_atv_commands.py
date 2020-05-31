@@ -18,7 +18,7 @@ async def connect_and_send_command(loop, address, commands):
             else:
                 await getattr(rc, command)()
     finally:
-        await atv.close()
+        atv.close()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
